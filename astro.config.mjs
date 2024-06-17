@@ -6,12 +6,14 @@ import sitemap from "@astrojs/sitemap";
 import mdx from "@astrojs/mdx";
 import alpine from "@astrojs/alpinejs";
 import dotenv from "dotenv";
+import vercel from "@astrojs/vercel/serverless";
 
 dotenv.config();
 // import alpine
 // https://astro.build/config
 export default defineConfig({
   output: "server",
+  adapter: vercel(),
   markdown: {
     drafts: true,
     shikiConfig: { theme: "css-variables" },
