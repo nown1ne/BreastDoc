@@ -11,6 +11,7 @@ dotenv.config();
 // import alpine
 // https://astro.build/config
 export default defineConfig({
+  output: "server",
   markdown: {
     drafts: true,
     shikiConfig: { theme: "css-variables" },
